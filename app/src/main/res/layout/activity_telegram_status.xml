@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Reusable "Telegram Bot" connection-status card. Meant to be pulled into a
+  host screen via <include layout="@layout/activity_telegram_status" />.
+  Purely informational: it shows whatever status the host activity sets on
+  @id/txt_telegram_status / @id/view_status_dot, it does not bind or connect
+  to anything itself.
+-->
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_telegram_status"
+    style="@style/AppTheme.Card.GradientStatus"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_gradient_status"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="@dimen/spacing_large">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:importantForAccessibility="no"
+            app:srcCompat="@drawable/ic_telegram" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/spacing_medium"
+            android:layout_marginLeft="@dimen/spacing_medium"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_telegram_status"
+                style="@style/AppTheme.StatusTitle" />
+
+            <TextView
+                android:id="@+id/txt_telegram_endpoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:ellipsize="middle"
+                android:singleLine="true"
+                style="@style/AppTheme.StatusSubtitle"
+                tools:ignore="MissingPrefix"
+                tools:text="https://api.telegram.org/…" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/view_status_dot"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/shape_status_dot"
+                android:backgroundTint="@color/colorStatusDisconnected"
+                android:importantForAccessibility="no" />
+
+            <TextView
+                android:id="@+id/txt_telegram_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/status_disconnected"
+                style="@style/AppTheme.StatusSubtitle"
+                android:textColor="@color/colorOnGradient"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
