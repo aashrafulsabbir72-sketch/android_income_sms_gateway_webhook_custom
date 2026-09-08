@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_bar_retry_failed"
+        android:title="@string/menu_retry_failed"
+        android:visible="false"
+        app:showAsAction="ifRoom|withText"
+        />
+    <item
+        android:id="@+id/action_bar_settings"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/menu_settings"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/action_bar_syslogs"
+        android:title="@string/menu_syslog"
+        app:showAsAction="never"
+        />
+</menu>

@@ -1,0 +1,9 @@
+<resources>
+
+    <!-- From M on the status bar can take the surface color with dark icons
+         (the bool flips to false in values-night). -->
+    <style name="AppTheme" parent="Base.AppTheme">
+        <item name="android:windowLightStatusBar">@bool/light_status_bar</item>
+    </style>
+
+</resources>

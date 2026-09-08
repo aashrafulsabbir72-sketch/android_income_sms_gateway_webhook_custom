@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Matches the surface app bar; safe from M up thanks to dark icons.
+         values-night wins over this on dark-mode devices. -->
+    <color name="colorStatusBar">#FFFFFF</color>
+</resources>
