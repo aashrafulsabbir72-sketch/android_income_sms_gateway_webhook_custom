@@ -4,4 +4,7 @@
     <dimen name="spacing_medium">16dp</dimen>
     <dimen name="spacing_large">24dp</dimen>
     <dimen name="card_corner_radius">12dp</dimen>
+    <dimen name="card_corner_radius_large">20dp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
+    <dimen name="status_icon_size">28dp</dimen>
 </resources>

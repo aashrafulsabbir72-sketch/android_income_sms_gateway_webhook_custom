@@ -8,4 +8,17 @@
     <!-- Pre-M there are no dark status-bar icons, so fall back to a dark bar. -->
     <color name="colorStatusBar">#000000</color>
     <color name="colorEmptyIcon">#C4C9D0</color>
+
+    <!-- Modern Material Design 3 palette used by the new status-card UI
+         (activity_main_new.xml / activity_telegram_status.xml /
+         fragment_system_status.xml). Kept separate from the palette above so
+         the existing screens are unaffected. -->
+    <color name="gradientStart">#4F46E5</color>
+    <color name="gradientEnd">#7C3AED</color>
+    <color name="colorOnGradient">#FFFFFF</color>
+    <color name="colorOnGradientSecondary">#E0D9FA</color>
+    <color name="colorStatusConnected">#34A853</color>
+    <color name="colorStatusDisconnected">#EA4335</color>
+    <color name="colorCardBackground">#FFFFFF</color>
+    <color name="colorCardStroke">#E3E6EB</color>
 </resources>

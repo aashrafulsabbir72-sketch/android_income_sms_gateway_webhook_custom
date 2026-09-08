@@ -68,4 +68,18 @@
     <string name="backup_export_failed">Не удалось экспортировать</string>
     <string name="backup_import_success">Импортировано правил: %d</string>
     <string name="backup_import_failed">Не удалось импортировать: неверный файл резервной копии</string>
+
+    <!-- New Material Design 3 status-card home screen. -->
+    <string name="title_telegram_status">Telegram-бот</string>
+    <string name="status_connected">Подключено</string>
+    <string name="status_disconnected">Отключено</string>
+    <string name="label_battery">Батарея</string>
+    <string name="label_network">Сеть</string>
+    <string name="label_sms_count">Получено SMS</string>
+    <string name="label_forwarding_toggle">Пересылка SMS</string>
+    <string name="forwarding_toggle_hint">Включите, чтобы начать пересылку входящих сообщений</string>
+    <string name="btn_send_test_message">Отправить тестовое сообщение</string>
+    <string name="title_recent_logs">Последние сообщения</string>
+    <string name="empty_recent_logs">Сообщений пока нет</string>
+    <string name="btn_open_settings">Настройки</string>
 </resources>

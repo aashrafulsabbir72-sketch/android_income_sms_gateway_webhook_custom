@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  New Material Design 3 style home screen. Not wired into MainActivity yet
+  so it can be reviewed/integrated without changing current behavior.
+
+  Every action here is manual and user-triggered:
+    - switch_forwarding_toggle is a plain switch with no listener attached
+      in this layout; nothing auto-binds or auto-starts anything.
+    - btn_send_test_message / btn_open_settings are plain buttons.
+  It is the host Activity's responsibility to wire click/change listeners.
+-->
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_medium">
+
+            <!-- Telegram Status Card -->
+            <include layout="@layout/activity_telegram_status" />
+
+            <!-- System Status Panel: battery / network / SMS count -->
+            <include layout="@layout/fragment_system_status" />
+
+            <!-- Manual ON/OFF toggle for SMS forwarding. -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/AppTheme.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_forwarding_toggle"
+                            style="@style/AppTheme.SystemStatValue" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/forwarding_toggle_hint"
+                            style="@style/AppTheme.HelperText" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switch_forwarding_toggle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:contentDescription="@string/label_forwarding_toggle"
+                        android:scaleX="1.2"
+                        android:scaleY="1.2" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Manual test-message action. -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_send_test_message"
+                style="@style/AppTheme.Button.Primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:text="@string/btn_send_test_message"
+                app:icon="@drawable/ic_telegram"
+                app:iconGravity="textStart" />
+
+            <!-- Recent logs (last received SMS). -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:layout_marginBottom="@dimen/spacing_small"
+                android:text="@string/title_recent_logs"
+                style="@style/AppTheme.SectionHeader" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/AppTheme.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ListView
+                        android:id="@+id/list_recent_logs"
+                        android:layout_width="match_parent"
+                        android:layout_height="280dp"
+                        android:divider="?android:attr/listDivider"
+                        android:dividerHeight="1dp"
+                        android:nestedScrollingEnabled="true"
+                        android:scrollbarStyle="outsideOverlay" />
+
+                    <TextView
+                        android:id="@+id/txt_recent_logs_empty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/spacing_large"
+                        android:layout_marginBottom="@dimen/spacing_large"
+                        android:text="@string/empty_recent_logs"
+                        style="@style/AppTheme.HelperText" />
+
+                </FrameLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Settings navigation. -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_open_settings"
+                style="@style/AppTheme.Button.Secondary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                android:text="@string/btn_open_settings"
+                app:icon="@drawable/ic_settings"
+                app:iconGravity="textStart" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

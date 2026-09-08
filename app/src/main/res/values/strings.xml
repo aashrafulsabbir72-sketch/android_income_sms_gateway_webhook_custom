@@ -68,4 +68,19 @@
     <string name="backup_export_failed">Export failed</string>
     <string name="backup_import_success">Imported %d rule(s)</string>
     <string name="backup_import_failed">Import failed: not a valid backup file</string>
+
+    <!-- New Material Design 3 status-card home screen (activity_main_new.xml
+         and its included status card / system panel components). -->
+    <string name="title_telegram_status">Telegram Bot</string>
+    <string name="status_connected">Connected</string>
+    <string name="status_disconnected">Disconnected</string>
+    <string name="label_battery">Battery</string>
+    <string name="label_network">Network</string>
+    <string name="label_sms_count">SMS received</string>
+    <string name="label_forwarding_toggle">SMS forwarding</string>
+    <string name="forwarding_toggle_hint">Turn on to start forwarding incoming messages</string>
+    <string name="btn_send_test_message">Send test message</string>
+    <string name="title_recent_logs">Recent messages</string>
+    <string name="empty_recent_logs">No messages received yet</string>
+    <string name="btn_open_settings">Settings</string>
 </resources>

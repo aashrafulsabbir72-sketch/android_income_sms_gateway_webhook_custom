@@ -7,4 +7,14 @@
     <color name="colorBackground">#121315</color>
     <color name="colorStatusBar">#121315</color>
     <color name="colorEmptyIcon">#3C4043</color>
+
+    <!-- Modern MD3 palette (dark variant); see values/colors.xml. -->
+    <color name="gradientStart">#3730A3</color>
+    <color name="gradientEnd">#5B21B6</color>
+    <color name="colorOnGradient">#FFFFFF</color>
+    <color name="colorOnGradientSecondary">#D6CCF5</color>
+    <color name="colorStatusConnected">#81C995</color>
+    <color name="colorStatusDisconnected">#F28B82</color>
+    <color name="colorCardBackground">#1E2022</color>
+    <color name="colorCardStroke">#2E3033</color>
 </resources>
