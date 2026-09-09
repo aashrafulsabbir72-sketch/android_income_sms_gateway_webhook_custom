@@ -1,0 +1,25 @@
+# Gradle files
+gradle/wrapper/gradle-*.zip
+.gradle/
+build/
+
+# Android
+*.apk
+*.aar
+*.ap_
+*.dex
+*.class
+bin/
+gen/
+local.properties
+
+# IDE
+.idea/
+*.iml
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
